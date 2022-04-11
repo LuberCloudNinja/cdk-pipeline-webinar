@@ -13,6 +13,6 @@ class WebServiceStage(Stage):
         super().__init__(scope, construct_id, **kwargs)
 
         service = PipelinesWebinarStack(self, 'Webservice')
-        s3_bucket = S3Bucket(self, 'S3-Bucket-1')
+        # s3_bucket = S3Bucket(self, 'S3-Bucket-1')
 
         self.url_output = service.url_output
