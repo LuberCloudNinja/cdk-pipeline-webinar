@@ -13,7 +13,7 @@ from aws_cdk import (
 )
 from os import path
 from constructs import Construct
-# from executing import Source
+from .webservice_stage import WebServiceStage
 
 
 class PipelineStack(Stack):
@@ -47,3 +47,5 @@ class PipelineStack(Stack):
             ),
 
         )
+        deploy = WebServiceStage(self, "Deploy", env=env)
+        deploy_stage = pipeline.add_stage(deploy)
