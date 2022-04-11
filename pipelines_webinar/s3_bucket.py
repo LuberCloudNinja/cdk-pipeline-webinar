@@ -13,4 +13,4 @@ class S3Bucket(Stack):
         super().__init__(scope, construct_id, **kwargs)
 
         s3.Bucket(self, "Create-cutcket",
-                  bucket_name="cloudNinja-cdk-pipeline")
+                  bucket_name="cloud-ninja-cdk-pipeline")
